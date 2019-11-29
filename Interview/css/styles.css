@@ -1,0 +1,173 @@
+.spinner {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+  }
+  .spinner:after {
+    content: " ";
+    display:block;
+    position:absolute;
+    left:42%;
+    top:40%;
+    border-radius: 50%;
+    width: 30px;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 100px solid rgb(0, 21, 110);
+    border-color: rgb(0, 21, 110) transparent rgb(0, 21, 110) transparent;
+    animation: spinner 1.2s infinite;
+  }
+  @keyframes spinner {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  body {
+    margin: 0;
+  }
+  .header {
+    text-align: center;
+    background-color: navy;
+    color: white;
+    padding: 20px;
+    position:sticky; 
+    top: 0;
+  }
+  .sidenav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .sidenav a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .sidenav #burgerMenu {
+    display: none;
+  }
+  .active {
+    background-color: navy;
+    color: white;
+  }
+  .first-container {
+    text-align: center;
+  }
+  .seo-text {
+    font: 36px;
+  }
+  .sections {
+    padding-left: 0px;
+  }
+  .sections .tab {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 0 10px;
+  }
+  .sections .tab a{
+      text-decoration: none;
+      color: black;
+  }
+
+  .sections .tab:active {
+      color: #fff;
+      background: #818181;
+  }
+  .sections .tab:hover {
+    color: #000;
+    background: #f1f1f1;
+}
+  
+  .games-display {
+    width: 100%;
+    display: inline-block;    
+  }
+  .game-tab {
+    padding-left: 0px;
+  }
+  .game-tab li {
+      display: inline-block;
+      width: 20%;
+      height: 125px;
+      border: 2px solid black;
+      margin-bottom: 10px;
+      
+  }
+  @media (min-width: 1024px) {
+      .sidenav {
+          width: 230px;
+      }
+      .sidenav #burgerMenu {
+          display: block;
+      }
+      .first-container {
+          margin-left: 15%;
+      }
+  }
+  @media (max-width: 320px) {
+      .game-tab li {
+          height: 100px;
+      }
+      .spinner:after {
+          left: 20%;
+      }
+
+      .first-container {
+          margin-left: 15%;
+      }
+      .sections .tab {
+          margin: 0;
+      }
+  }
+
+  @media (min-width: 321px) and (max-width: 414px) {
+    
+    .spinner:after {
+        left: 20%;
+    }
+
+    .first-container {
+        margin-left: 12%;
+    }
+    .sections .tab {
+        margin: 0;
+    }
+}
+
+  @media (min-width: 501px) and (max-width: 800px) {
+    .game-tab li {
+        height: 100px;
+    }
+    .spinner:after {
+        left: 36%;
+    }
+    .sections .tab {
+        margin: 0;
+    }
+}
+  
