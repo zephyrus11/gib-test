@@ -3,10 +3,6 @@ $(window).load(function() {
     $(".spinner").fadeOut(1000);
 });
 
-function loadSpinner(){
-    $(".spinner").fadeOut(1000);
-}
-
 function myFunction() {
     var burger = document.getElementById("burgerMenu");
     if (burger.style.width === "250px") {
